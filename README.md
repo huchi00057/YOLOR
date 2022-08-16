@@ -104,7 +104,7 @@ After the application is opend, then open the folder full of pictures.
 
 Finally, circle the object you wanna train for detection.
 
-[![Image from Gyazo](https://i.gyazo.com/885b36baa528329e9fca6a32e6234a7c.gif)](https://gyazo.com/885b36baa528329e9fca6a32e6234a7c)
+[![Image from Gyazo](https://i.gyazo.com/5ea2cfa6f6463a4af9846d6c4a2d9900.gif)](https://gyazo.com/5ea2cfa6f6463a4af9846d6c4a2d9900)
 
 🔱Amend the variables to fit in  your own model
 ====
