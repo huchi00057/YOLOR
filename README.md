@@ -73,10 +73,9 @@ If you master yolor, you can skip this step. The main purpose in the step is to 
 🔱Testing 
 ====
 Enter the command as following to test whether verything is alright.
-    python test.py --data data/coco.yaml --img 1280 --batch 32 --conf 0.001 --iou 0.65 --device 0 --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --name yolor_p6_val
+        python test.py --data data/coco.yaml --img 1280 --batch 32 --conf 0.001 --iou 0.65 --device 0 --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --name yolor_p6_val
 
 Let me show you how it's like
-
 
 
 
