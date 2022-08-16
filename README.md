@@ -1,3 +1,6 @@
+I AM NOT FINISHED!!!!!
+====
+
 🔱Download YoloR Github Resources from WongKinYiu
 ====
 🔗 https://github.com/WongKinYiu/yolor
@@ -52,6 +55,19 @@ Scroll it until you see the title named "Testing", you'll see a link named yolor
 ====
 Because my service is Windows, not Ubuntu, we need to execute it like below.
 
+If you master yolor, you can skip this step. The main purpose in the step is to make sure the sucess of necessiry installment.
+
+## 1.Download an application named Cygwin
+
+🔗 http://www.cygwin.com/
+
+![image](https://user-images.githubusercontent.com/46515944/184843282-f1c646eb-be61-4585-ab8a-28f94747c8e4.png)
+
+[![Image from Gyazo](https://i.gyazo.com/cf94d41e0aa2b41595b5f56af632b6c5.gif)](https://gyazo.com/cf94d41e0aa2b41595b5f56af632b6c5)
+
+![image](https://user-images.githubusercontent.com/46515944/184843405-7398b87f-debd-4613-8067-e0d708c1c0c0.png)
+
+
 
 
 🔱Testing 
@@ -66,3 +82,35 @@ Let me show you how it's like
 
 🔱Prepare your own train data
 ====
+** 1.Installment-Labelimg
+
+First, open your anaconda prompt, then enter in：
+
+    pip install labelimg
+    
+![image](https://user-images.githubusercontent.com/46515944/178677962-db8a83df-c66d-413c-a70c-2d169ecb1bff.png)
+
+after finished, you can open it by the command：
+
+    labelimg
+    
+and it looks like that
+![image](https://user-images.githubusercontent.com/46515944/178678038-ef99ca39-8ba9-49a5-a825-c3a2260d7bb0.png)
+
+** 2.Operatation-Labelimg
+
+After the application is opend, then open the folder full of pictures.
+
+[![Image from Gyazo](https://i.gyazo.com/ea4752782ba9b9ae41eeb2ac5aa7e3fc.gif)](https://gyazo.com/ea4752782ba9b9ae41eeb2ac5aa7e3fc)
+
+Finally, circle the object you wanna train for detection.
+
+[![Image from Gyazo](https://i.gyazo.com/885b36baa528329e9fca6a32e6234a7c.gif)](https://gyazo.com/885b36baa528329e9fca6a32e6234a7c)
+
+🔱Amend the variables to fit in  your own model
+====
+
+
+🔱Trian the model
+====
+
