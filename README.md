@@ -1,6 +1,3 @@
-I AM NOT FINISHED!!!!!
-====
-
 🔱Download YoloR Github Resources from WongKinYiu
 ====
 🔗 https://github.com/WongKinYiu/yolor
@@ -119,8 +116,86 @@ Finally, circle the object you wanna train for detection.
 
 🔱Amend the variables to fit in  your own model
 ====
+## Put your own data to yolor/data/data
+
+![image](https://user-images.githubusercontent.com/46515944/185083001-cdfa9d20-ee5e-48dc-8f98-3492415dfe1b.png)
+
+
+## Create a .cfg file in yolor/cfg
+
+You can copy if from any .cfg file and amend some variables.
+
+Like me, i chose yolor_p6.cfg.
+
+And considering my Ram, so justify batch, subdivision, width, height, learning_rate, max_batches, steps.
+
+> steps = (0.8 * max_batches ,0.9 * max_batches)
+
+![image](https://user-images.githubusercontent.com/46515944/185080939-c9947b88-7b2e-4cc9-949a-3fc6a98a3866.png)
+
+> filters = (classes + 5) * 3
+> Search "[yolo]", and change the filters before "yolo", like bellowing picture shows.
+
+![image](https://user-images.githubusercontent.com/46515944/185082036-4c314727-95cf-4dc6-93ea-2277e1854c5a.png)
+
+It approximately in line 1569,1573,11577,1581,1605,1649,1693,1737.
+
+![image](https://user-images.githubusercontent.com/46515944/185081698-da88c507-790f-4943-aa94-885967214467.png)
+![image](https://user-images.githubusercontent.com/46515944/185081762-a487cea8-3075-4a1b-8ca1-ed43ab645d16.png)
+![image](https://user-images.githubusercontent.com/46515944/185081786-8ff02f27-8634-4417-b8af-7af2635e3bc0.png)
+![image](https://user-images.githubusercontent.com/46515944/185081816-98fb0229-0579-4f5c-943d-ce14d6c85e6e.png)
+![image](https://user-images.githubusercontent.com/46515944/185081865-78f1e468-8cb9-40e0-99e8-2719e8588c4d.png)
+
+
+
+
+## Create a .yaml file in yolor/data
+
+It record the paths of your data handled in the last step, the number of classes, and classes' names.
+
+![image](https://user-images.githubusercontent.com/46515944/185079295-65fd96e0-2d01-49a5-b53c-c72a10b7957a.png)
+
+⚠ Type is .yaml
+
+## Create a .names file in yolor/data
+
+Store your own classes in lines like yolov4.
+
+![image](https://user-images.githubusercontent.com/46515944/185078956-b0d2f0fe-d4c9-4248-96b8-9c3581af0153.png)
+
+⚠ Type is .names
+
+![image](https://user-images.githubusercontent.com/46515944/185079721-5beb182f-d437-4c8a-a160-5c79104ab8a3.png)
 
 
 🔱Trian the model
 ====
+## Train a new model
 
+        python train.py --batch-size 4 --img 640 640 --data data/your.yaml --cfg cfg/your.cfg --epochs 300
+
+If it break accidently, you don't need to train it from the start. Let me show you
+
+## Train from the middle
+
+        python train.py --batch-size 4 --img 640 640 --data data/your.yaml --cfg cfg/your.cfg --weights runs/train/yolor_p6/weights/best.pt --epochs 300
+
+
+
+## Check and run your model
+
+> After training ,your weight will store in yolor/runs/train/yolor_???
+
+## Run it and TAKE A BREAK !!
+
+> Test in Videos
+
+        python detect.py --source path/your_video--cfg cfg/your.cfg --weights runs/train/your_best.pt 
+
+> Test in Images
+
+        python detect.py --source path/image/pic.jpg --cfg cfg/your.cfg --weights runs/train/your_best.pt 
+        
+Besides, you can run images for not just one. In other words, the model can detect a folder full of images one time.
+
+        python detect.py --source path/img_folder --cfg cfg/your.cfg --weights runs/train/your_best.pt 
